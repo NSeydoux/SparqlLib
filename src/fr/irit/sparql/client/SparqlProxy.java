@@ -192,7 +192,7 @@ public class SparqlProxy implements Serializable
 	public boolean storeData(StringBuilder query)
 	{
 		boolean ret = true;
-		query = SparqlProxy.makeQuery(query);
+		//query = SparqlProxy.makeQuery(query);
 		HttpURLConnection connection = null;
 		try
 		{
@@ -236,7 +236,7 @@ public class SparqlProxy implements Serializable
 		return ret;
 	}
 
-	public File writeKBFile(String fileName)
+	public File writeKBFile(String dirPath, String fileName)
 	{
 		File ret = null;
 		HttpURLConnection connection = null;
@@ -249,7 +249,7 @@ public class SparqlProxy implements Serializable
 			String line;
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
 					connection.getInputStream()));
-			FileWriter f = new FileWriter("out/" + fileName + ".owl");
+			FileWriter f = new FileWriter(dirPath + fileName + ".owl");
 
 			while ((line = reader.readLine()) != null)
 			{
