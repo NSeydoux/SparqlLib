@@ -1,10 +1,10 @@
 package fr.irit.sparql.query;
 
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.Set;
 
 import com.fasterxml.jackson.databind.JsonNode;
-
-import fr.irit.utils.Pair;
 
 
 /**
@@ -15,7 +15,7 @@ public class SparqlSelect extends SparqlQuery
 	private String select;
 	private String aggregate;
 
-	public SparqlSelect(ArrayList<Pair<String, String>> prefix, String from, String select,
+	public SparqlSelect(Set<Map.Entry<String, String>> prefix, String from, String select,
 			String where, String aggregate)
 	{
 		super(prefix, from, where);
@@ -23,7 +23,7 @@ public class SparqlSelect extends SparqlQuery
 		this.setAggregate(aggregate);
 	}
 	
-	public SparqlSelect(ArrayList<Pair<String, String>> prefix, String select,	String where)
+	public SparqlSelect(Set<Map.Entry<String, String>> prefix, String select,	String where)
 	{
 		super(prefix, "", where);
 		this.setSelect(select);

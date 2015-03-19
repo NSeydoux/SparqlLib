@@ -1,15 +1,14 @@
 package fr.irit.sparql.query;
 
-import java.util.ArrayList;
-
-import fr.irit.utils.Pair;
+import java.util.Map;
+import java.util.Set;
 
 public class SparqlUpdate extends SparqlQuery
 {
 	private String delete;
 	private String insert;
 	
-	public SparqlUpdate(ArrayList<Pair<String, String>> prefix, String delete, String insert, String where)
+	public SparqlUpdate(Set<Map.Entry<String, String>> prefix, String delete, String insert, String where)
 	{
 		super(prefix, "", where);
 		this.delete = delete;
