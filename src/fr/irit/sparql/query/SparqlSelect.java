@@ -1,6 +1,7 @@
 package fr.irit.sparql.query;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -26,6 +27,13 @@ public class SparqlSelect extends SparqlQuery
 	public SparqlSelect(Set<Map.Entry<String, String>> prefix, String select,	String where)
 	{
 		super(prefix, "", where);
+		this.setSelect(select);
+		this.setAggregate("");
+	}
+	
+	public SparqlSelect(String select,	String where)
+	{
+		super(new HashSet<Map.Entry<String, String>>(), "", where);
 		this.setSelect(select);
 		this.setAggregate("");
 	}
