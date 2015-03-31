@@ -190,6 +190,7 @@ public class SparqlProxy implements Serializable
 	}
 
 	public boolean storeData(StringBuilder query)
+	//public boolean storeData(String query)
 	{
 		boolean ret = true;
 		//query = SparqlProxy.makeQuery(query);
@@ -326,6 +327,7 @@ public class SparqlProxy implements Serializable
 	public void clearSp()
 	{
 		this.storeData(new StringBuilder("DELETE WHERE{?a ?b ?c}"));
+		//this.storeData("DELETE WHERE{?a ?b ?c}");
 	}
 
 	public String getUrlServer()
