@@ -10,4 +10,9 @@ public class SparqlInsertData extends SparqlAbstarctDataQuery
 		super(prefix, data);
 		this.keyword = "INSERT DATA";
 	}
+	
+	public void setKeyWords(String keyword)
+	{
+		this.keyword = keyword;
+	}
 }

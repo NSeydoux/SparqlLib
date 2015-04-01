@@ -12,6 +12,7 @@ public class SparqlInsertWhere extends SparqlInsertData
 	{
 		super(prefix, data);
 		this.where = where;
+		this.setKeyWords("INSERT");
 	}
 
 	public String toString()

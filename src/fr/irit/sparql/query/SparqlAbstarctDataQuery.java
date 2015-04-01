@@ -13,7 +13,7 @@ public abstract class SparqlAbstarctDataQuery extends SparqlQuery
 		super(prefix, "", "");
 		this.data = data;
 	}
-	
+		
 	public String toString()
 	{
 		return this.formatPrefixes() + this.keyword+ "{"+data+"}";
