@@ -1,5 +1,6 @@
-package fr.irit.sparql.query;
+package fr.irit.sparql.query.Ask;
 
+import fr.irit.sparql.query.SparqlQuery;
 import java.util.Map.Entry;
 import java.util.Set;
 

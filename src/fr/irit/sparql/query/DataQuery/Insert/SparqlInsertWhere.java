@@ -1,4 +1,4 @@
-package fr.irit.sparql.query;
+package fr.irit.sparql.query.DataQuery.Insert;
 
 import java.util.Map.Entry;
 import java.util.Set;

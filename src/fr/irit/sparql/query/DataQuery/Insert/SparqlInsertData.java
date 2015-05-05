@@ -1,9 +1,10 @@
-package fr.irit.sparql.query;
+package fr.irit.sparql.query.DataQuery.Insert;
 
+import fr.irit.sparql.query.DataQuery.SparqlAbstractDataQuery;
 import java.util.Map;
 import java.util.Set;
 
-public class SparqlInsertData extends SparqlAbstarctDataQuery
+public class SparqlInsertData extends SparqlAbstractDataQuery
 {
 	public SparqlInsertData(Set<Map.Entry<String, String>> prefix, String data)
 	{
