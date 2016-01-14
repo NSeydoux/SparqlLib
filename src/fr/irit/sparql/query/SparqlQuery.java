@@ -19,12 +19,15 @@ public abstract class SparqlQuery
 
 	public SparqlQuery(Set<Map.Entry<String, String>> prefix, String from, String where)
 	{
-		this.prefix = new HashSet<>();
+		this.prefix = new HashSet<Map.Entry<String,String>>();
 		this.prefix.add(new AbstractMap.SimpleEntry<String, String>("rdf", "<http://www.w3.org/1999/02/22-rdf-syntax-ns#>"));
 		this.prefix.add(new AbstractMap.SimpleEntry<String, String>("rdfs", "<http://www.w3.org/2000/01/rdf-schema#>"));
 		this.prefix.add(new AbstractMap.SimpleEntry<String, String>("owl", "<http://www.w3.org/2002/07/owl#>"));
 		this.prefix.add(new AbstractMap.SimpleEntry<String, String>("xsd", "<http://www.w3.org/2001/XMLSchema#>"));
-		this.prefix.addAll(prefix);
+		if(prefix != null && !prefix.isEmpty())
+		{
+			this.prefix.addAll(prefix);
+		}
 		this.from = from;
 		this.where = where;
 	}
