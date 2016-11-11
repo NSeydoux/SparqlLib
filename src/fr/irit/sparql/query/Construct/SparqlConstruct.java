@@ -28,7 +28,7 @@ public class SparqlConstruct extends SparqlQuery{
 	{
 		
 		return    this.formatPrefixes()
-				+ "CONSTRUCT "+this.construct+"\n"
+				+ "CONSTRUCT {\n"+this.construct+"}\n"
 				+ (this.getFrom().equals("")?"":" FROM "+this.getFrom()+"\n")
 				+ " WHERE {\n"+this.getWhere()+"}\n";
 	}
