@@ -39,7 +39,6 @@ public class FolderManager {
 		        	if(query.replaceAll("\n", " ").matches("^.*\\{\\{ .* \\}\\}.*$")){
 		        		queryTemplates.put(fileEntry.getName().split("\\.")[0], new QueryTemplate(query));
 		        	} else {
-		        		System.out.println(query+" is not a template");
 		        		queries.put(fileEntry.getName().split("\\.")[0], query);
 		        	}
 				} catch (IOException e) {
